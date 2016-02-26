@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <BuildProperty>
+	<DatabaseName>CirrusUniverse</DatabaseName>
+	<ServerName_QA>AW-SQL03-QA</ServerName_QA>
+	<ServerName_STG>AW-SQL03-QA</ServerName_STG>
+	<ServerName_DEV>AW-SQL03-QA</ServerName_DEV>
+	<ServerName_PROD>AW-SQL03-QA</ServerName_PROD>
+  </BuildProperty>
+</Project>

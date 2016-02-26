@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CirrusUniverse</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{aa59bc67-53ae-4282-8e93-1fd50522c0ff}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CirrusUniverse</RootNamespace>
+    <AssemblyName>CirrusUniverse</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <ServiceBrokerOption>EnableBroker</ServiceBrokerOption>
+    <Trustworthy>True</Trustworthy>
+    <AutoUpdateStatistics>False</AutoUpdateStatistics>
+    <AutoCreateStatistics>False</AutoCreateStatistics>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="user\" />
+    <Folder Include="user\Tables\" />
+    <Folder Include="feed\" />
+    <Folder Include="feed\Tables\" />
+    <Folder Include="reference\" />
+    <Folder Include="reference\Tables\" />
+    <Folder Include="staging\" />
+    <Folder Include="staging\Tables\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="feed\Stored Procedures\" />
+    <Folder Include="dataflow\" />
+    <Folder Include="dataflow\Tables\" />
+    <Folder Include="Service Broker\" />
+    <Folder Include="dataflow\Stored Procedures\" />
+    <Folder Include="MetaData" />
+    <Folder Include="MetaData\Tables" />
+    <Folder Include="feed\Functions\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="user\Tables\Account.sql" />
+    <Build Include="feed\Tables\Configuration.sql" />
+    <Build Include="user\Tables\AccountUser.sql" />
+    <Build Include="feed\Tables\CorporateLinkage.sql" />
+    <Build Include="feed\Tables\CssFss.sql" />
+    <Build Include="feed\Tables\DnBRatingDaily.sql" />
+    <Build Include="user\Tables\Workspace.sql" />
+    <Build Include="feed\Tables\Execution.sql" />
+    <Build Include="feed\Tables\ExecutionStatus.sql" />
+    <Build Include="user\Tables\AccountPortfolio.sql" />
+    <Build Include="feed\Tables\Financial.sql" />
+    <Build Include="feed\Tables\GlobalCompanyProfile.sql" />
+    <Build Include="user\Tables\PortfolioBusiness.sql" />
+    <Build Include="feed\Tables\Identity.sql" />
+    <Build Include="feed\Tables\Paydex.sql" />
+    <Build Include="feed\Tables\PaydexDaily.sql" />
+    <Build Include="feed\Tables\SASDaily.sql" />
+    <Build Include="feed\Tables\Subject.sql" />
+    <Build Include="staging\Tables\PaydexDaily.sql" />
+    <Build Include="Storage\FEED.sql" />
+    <Build Include="Storage\INDEX.sql" />
+    <Build Include="Storage\STAGING.sql" />
+    <Build Include="dbo\Stored Procedures\sp_WhoIsActive.sql" />
+    <Build Include="Security\feed.sql" />
+    <Build Include="Security\reference.sql" />
+    <Build Include="Security\staging.sql" />
+    <Build Include="Security\user.sql" />
+    <Build Include="feed\Stored Procedures\PaydexDailyUpsert.sql" />
+    <Build Include="feed\Stored Procedures\ExecutionUpdate.sql" />
+    <Build Include="feed\Stored Procedures\ExecutionInsert.sql" />
+    <Build Include="staging\Tables\DnBRatingDaily.sql" />
+    <Build Include="dataflow\Tables\CirrusOnlineBusiness.sql" />
+    <Build Include="dataflow\Tables\BusinessScoreChangeQueue.sql" />
+    <Build Include="Storage\DATAFLOW.sql" />
+    <Build Include="feed\Stored Procedures\DnBRatingDailyUpsert.sql" />
+    <Build Include="Service Broker\DataFlowContract.sql" />
+    <Build Include="Service Broker\DataFlowSendMessage.sql" />
+    <Build Include="Service Broker\DataFlowReplyMessage.sql" />
+    <Build Include="Service Broker\UniverseQueue.sql" />
+    <Build Include="Security\dataflow.sql" />
+    <Build Include="Service Broker\DataFlowUniverseService.sql" />
+    <Build Include="dataflow\Stored Procedures\ProcessQueue.sql" />
+    <Build Include="staging\Tables\USSASDaily.sql" />
+    <Build Include="feed\Stored Procedures\USSASDailyUpsert.sql" />
+    <Build Include="staging\Tables\SASDailyCA.sql" />
+    <Build Include="staging\Tables\PaydexTrendCA.sql" />
+    <Build Include="staging\Tables\PaydexDailyCA.sql" />
+    <Build Include="staging\Tables\FSSTrendCA.sql" />
+    <Build Include="staging\Tables\DnBRatingDailyCA.sql" />
+    <Build Include="feed\Stored Procedures\SASDailyCAUpsert.sql" />
+    <Build Include="feed\Stored Procedures\PaydexTrendCAUpsert.sql" />
+    <Build Include="feed\Stored Procedures\PaydexDailyCAUpsert.sql" />
+    <Build Include="feed\Stored Procedures\FSSTrendCAUpsert.sql" />
+    <Build Include="feed\Stored Procedures\DnBRatingDailyCAUpsert.sql" />
+    <Build Include="staging\Tables\CCSTrendCA.sql" />
+    <Build Include="feed\Stored Procedures\CCSTrendCAUpsert.sql" />
+    <Build Include="dataflow\Stored Procedures\SendDailyScoresToCirrusOnline.sql" />
+    <Build Include="reference\Tables\ScotsIndicator.sql" />
+    <Build Include="reference\Tables\ScotsCodeValues.sql" />
+    <Build Include="staging\Tables\PaydexTrend.sql" />
+    <Build Include="feed\Tables\PaydexTrend.sql" />
+    <Build Include="feed\Tables\FSSTrend.sql" />
+    <Build Include="feed\Tables\CCSTrend.sql" />
+    <Build Include="feed\Stored Procedures\PaydexTrendUpsert.sql" />
+    <Build Include="staging\Tables\CCSFSSTrend.sql" />
+    <Build Include="feed\Stored Procedures\CCSFSSTrendUpsert.sql" />
+    <Build Include="staging\Tables\SubjectCA.sql" />
+    <Build Include="staging\Tables\SubjectAcxiom.sql" />
+    <Build Include="staging\Tables\Subject.sql" />
+    <Build Include="feed\Stored Procedures\SubjectUpsert.sql" />
+    <Build Include="feed\Stored Procedures\SubjectCAUpsert.sql" />
+    <Build Include="feed\Stored Procedures\SubjectAcxiomUpsert.sql" />
+    <Build Include="reference\Tables\GEOCountryCodeMapping.sql" />
+    <Build Include="reference\Tables\USSevereAndAlertService.sql" />
+    <Build Include="reference\Tables\WBISOFIPSMapping.sql" />
+    <Build Include="staging\Tables\Identity.sql" />
+    <Build Include="reference\Tables\SCoTSCodeToLiteralMap.sql" />
+    <Build Include="reference\Tables\SCoTSCodeTables.sql" />
+    <Build Include="feed\Stored Procedures\IdentityUpsert.sql" />
+    <Build Include="staging\Tables\CorporateLinkage.sql" />
+    <Build Include="feed\Stored Procedures\CorporateLinkageUpsert.sql" />
+    <Build Include="dataflow\Tables\BusinessRiskIndicatorChangeQueue.sql" />
+    <Build Include="feed\Functions\fn_GetRiskIndicatorBySCoTS.sql" />
+    <Build Include="dataflow\Stored Procedures\SendBusinessIndicatorChangesToCirrusOnline.sql" />
+    <Build Include="staging\Tables\CreditLimitRecDaily.sql" />
+    <Build Include="feed\Stored Procedures\CreditLimitRecDailyUpsert.sql" />
+    <Build Include="reference\Tables\SubjectFeedElementsMap.sql" />
+    <Build Include="reference\Tables\SCoTSCodeToAltCodeMap.sql" />
+    <Build Include="dbo\Tables\SCoTSLite.sql" />
+    <Build Include="dbo\Tables\GeographicRegions.sql" />
+    <Build Include="dataflow\Tables\BusinessProfileChangeQueue.sql" />
+    <Build Include="feed\Stored Procedures\IdentityAcxiomUpsert.sql" />
+    <Build Include="dataflow\Stored Procedures\SendBusinessProfileChangesToCirrusOnline.sql" />
+    <Build Include="dataflow\Stored Procedures\GetBusinessId.sql" />
+    <Build Include="dataflow\Stored Procedures\ProcessUniverseDexQueue.sql" />
+    <Build Include="dataflow\Stored Procedures\ReturnedBusinessIdDex.sql" />
+    <Build Include="dataflow\Tables\BusinessScoreTrendQueue.sql" />
+    <Build Include="dataflow\Stored Procedures\SendPaydexTrendToCirrusOnline.sql" />
+    <Build Include="dataflow\Stored Procedures\SendFSSTrendToCirrusOnline.sql" />
+    <Build Include="dataflow\Stored Procedures\SendCCSTrendToCirrusOnline.sql" />
+    <Build Include="dataflow\Tables\FeedBookmark.sql" />
+    <Build Include="reference\Tables\GEOUnitToISOCountryCodeMap.sql" />
+    <Build Include="dataflow\Stored Procedures\SendCorporateLinkageToCirrusOnline.sql" />
+    <Build Include="dbo\User Defined Types\BusinessIDTableType.sql" />
+    <Build Include="feed\Functions\fn_GetLegalStructureByLegalFormCodes.sql" />
+    <Build Include="staging\Tables\IdentityCA.sql" />
+    <Build Include="feed\Stored Procedures\IdentityCAUpsert.sql" />
+    <Build Include="dbo\User Defined Types\DunsNumberTableType.sql" />
+    <Build Include="staging\Tables\EdgarBalanceSheet.sql" />
+    <Build Include="staging\Tables\EdgarIncomeStatement.sql" />
+    <Build Include="staging\Tables\EdgarCashFlow.sql" />
+    <Build Include="feed\Stored Procedures\EdgarIncomeStatementUpsert.sql" />
+    <Build Include="feed\Stored Procedures\EdgarCashFlowUpsert.sql" />
+    <Build Include="feed\Stored Procedures\EdgarBalanceSheetUpsert.sql" />
+    <Build Include="staging\Tables\DnBFinancial.sql" />
+    <Build Include="feed\Stored Procedures\FinancialDnBUpsert.sql" />
+    <Build Include="feed\Stored Procedures\FinancialAcxiomUpsert.sql" />
+    <Build Include="feed\Stored Procedures\TrendEUDelete.sql" />
+    <Build Include="feed\Stored Procedures\TrendEUBusinessIDUpdate.sql" />
+    <Build Include="feed\Stored Procedures\DailyScoresAcxiomUpsert.sql" />
+    <Build Include="dbo\User Defined Types\ExecutionOutputTableType.sql" />
+    <Build Include="dataflow\Tables\BusinessFinancialQueue_2.sql" />
+    <Build Include="dataflow\Stored Procedures\SendFinancialsToCirrusOnline_2.sql" />
+    <Build Include="staging\Tables\PortfolioMatchResults.sql" />
+    <Build Include="feed\Stored Procedures\PortfolioMatchResultsUpsert.sql" />
+    <Build Include="feed\Functions\fn_Get3LetterCountryCodeBySCoTS.sql" />
+    <Build Include="dataflow\Tables\BusinessWaitingQueue.sql" />
+    <Build Include="dataflow\Stored Procedures\DequeueBusinessWaitingQueue.sql" />
+    <Build Include="staging\Tables\BulkLoadDuns.sql" />
+    <Build Include="staging\Tables\BankruptcyFeedDaily.sql" />
+    <Build Include="feed\Stored Procedures\BankruptcyFeedDailyUpsert.sql" />
+    <Build Include="feed\Functions\fn_GetSevereRiskStatusBySCoTS.sql" />
+    <Build Include="reference\Tables\WBToISOCountryCodeMap.sql" />
+    <Build Include="reference\Tables\WBISOFIPSMapping_delete.sql" />
+    <Build Include="reference\Tables\SicCode.sql" />
+    <Build Include="reference\Tables\ScotCode.sql" />
+    <Build Include="reference\Tables\PCMPacketStore.sql" />
+    <Build Include="reference\Tables\ISOCountryToStateCodeMap.sql" />
+    <Build Include="reference\Tables\IndustryCodeTypeCodeMap.sql" />
+    <Build Include="reference\Tables\IndustryCodeToDescMap.sql" />
+    <Build Include="reference\Tables\IndustryCodeCrossWalkMap.sql" />
+    <Build Include="reference\Tables\IndustryCode.sql" />
+    <Build Include="reference\Tables\GeoUnitToGeoNameMap.sql" />
+    <Build Include="reference\Tables\DescriptionLength.sql" />
+    <Build Include="reference\Tables\CountryRiskScoretoRiskBandMap.sql" />
+    <Build Include="reference\Tables\CountryCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CirrusUniverse_QA.publish.xml" />
+    <None Include="CirrusUniverse_STG.publish.xml" />
+    <None Include="Service Broker\DexCUniverseSendMessage.sql" />
+    <None Include="Service Broker\DexCUniverseReplyMessage.sql" />
+    <None Include="Service Broker\DexCUniverseSimpleContract.sql" />
+    <None Include="Service Broker\DexCUniverseRoute.sql" />
+    <None Include="Service Broker\DexCirrusRoute.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="InsertFeedConfiguration.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>CirrusUniverse</TargetDatabaseName>
+    <DeployScriptFileName>CirrusUniverse.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=AE-SQL06-PRD;Integrated Security=True;Pooling=False</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+    <BlockOnPossibleDataLoss>False</BlockOnPossibleDataLoss>
+    <DropObjectsNotInSource>False</DropObjectsNotInSource>
+    <DropConstraintsNotInSource>False</DropConstraintsNotInSource>
+    <DropDmlTriggersNotInSource>False</DropDmlTriggersNotInSource>
+    <DropExtendedPropertiesNotInSource>False</DropExtendedPropertiesNotInSource>
+    <DropIndexesNotInSource>False</DropIndexesNotInSource>
+    <ExcludeUsers>True</ExcludeUsers>
+    <ScriptDatabaseOptions>False</ScriptDatabaseOptions>
+    <IgnoreRoleMembership>True</IgnoreRoleMembership>
+    <ExcludeDatabaseRoles>True</ExcludeDatabaseRoles>
+    <ExcludeLogins>True</ExcludeLogins>
+  </PropertyGroup>
+</Project>

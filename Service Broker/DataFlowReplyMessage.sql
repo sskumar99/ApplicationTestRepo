@@ -1,0 +1,4 @@
+﻿CREATE MESSAGE TYPE [DataFlowReplyMessage]
+    AUTHORIZATION [dbo]
+    VALIDATION = WELL_FORMED_XML;
+

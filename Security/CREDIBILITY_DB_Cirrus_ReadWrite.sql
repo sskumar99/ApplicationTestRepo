@@ -1,0 +1,6 @@
+﻿CREATE USER [CREDIBILITY\DB_Cirrus_ReadWrite] FOR LOGIN [CREDIBILITY\DB_Cirrus_ReadWrite];
+
+
+
+
+

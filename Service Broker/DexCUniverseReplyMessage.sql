@@ -1,0 +1,2 @@
+﻿CREATE MESSAGE TYPE [DexCUniverseReplyMessage]
+       VALIDATION = WELL_FORMED_XML;
